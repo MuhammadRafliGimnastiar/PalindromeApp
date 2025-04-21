@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.polindrom.PalindromeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_left"
+            app:title="Palindrome Checker"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_desc_palindrom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfOutput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDesc"
+            app:layout_constraintStart_toStartOf="@id/tvDesc"
+            app:layout_constraintEnd_toEndOf="@id/tvDesc"
+            android:enabled="false"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etInput"
+                android:layout_width="match_parent"
+                android:enabled="false"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvResponse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="POLINDROME"
+            app:layout_constraintTop_toBottomOf="@id/tfOutput"
+            app:layout_constraintStart_toStartOf="@id/tfOutput"
+            app:layout_constraintEnd_toEndOf="@id/tfOutput"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/red_color"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvResponse"
+            app:layout_constraintStart_toStartOf="@id/tvResponse"
+            app:layout_constraintEnd_toEndOf="@id/tvResponse"
+            android:layout_marginTop="24dp"
+            android:text="@string/save"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:listitem="@layout/item_data"
+            app:layout_constraintTop_toBottomOf="@id/btnSave"
+            app:layout_constraintStart_toStartOf="@id/btnSave"
+            app:layout_constraintEnd_toEndOf="@id/btnSave"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

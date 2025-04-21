@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="4dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_marginStart="12dp"
+            android:layout_marginVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvId"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="@id/btnDelete"
+            tools:text="01" />
+
+        <TextView
+            android:id="@+id/tvText"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+            app:layout_constraintEnd_toStartOf="@id/tvPalindrome"
+            app:layout_constraintStart_toEndOf="@id/tvId"
+            app:layout_constraintTop_toTopOf="@id/btnDelete"
+            tools:text="RAFLI" />
+
+        <TextView
+            android:id="@+id/tvPalindrome"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@id/btnDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnDelete"
+            android:layout_marginEnd="12dp"
+            tools:text="FALSE" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
